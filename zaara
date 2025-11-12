@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Cronus Zen 128x32 Anteprima</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        
+        /* Stile che simula il display OLED del Cronus Zen */
+        .oled-display {
+            width: 320px; /* Scala 2.5x per visibilità */
+            height: 80px; /* Scala 2.5x per visibilità */
+            background-color: #000000;
+            border: 5px solid #1a1a1a;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.2);
+            font-family: 'VT323', monospace; /* Font che simula un aspetto retro/pixel */
+            color: #00ffff; /* Colore "OLED Blue" */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            overflow: hidden;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        .main-text {
+            font-size: 28px; /* Simula un testo più grande */
+            line-height: 0.8;
+            font-weight: bold;
+        }
+
+        .sub-text {
+            font-size: 14px; /* Simula un testo più piccolo */
+            line-height: 1.2;
+            margin-top: -2px;
+        }
+
+        @media (max-width: 600px) {
+            .oled-display {
+                width: 90vw;
+                height: calc(90vw / 4);
+                max-width: 320px;
+                max-height: 80px;
+            }
+            .main-text { font-size: 8vw; }
+            .sub-text { font-size: 4vw; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4">
+    <div class="flex flex-col items-center space-y-8">
+        <h1 class="text-xl md:text-2xl font-bold text-teal-300">Logo 128x32 Monocromatico per Cronus Zen</h1>
+
+        <div class="p-8 bg-gray-800 rounded-xl shadow-2xl">
+            <div class="oled-display">
+                <span class="main-text">ZAARA</span>
+                <span class="sub-text">T H E D O G</span>
+            </div>
+        </div>
+
+        <p class="text-sm text-gray-400 max-w-xl text-center">
+            Questa è una simulazione dell'aspetto del logo sul display OLED del tuo Cronus Zen (128x32 pixel).
+            L'immagine reale da caricare (la matrice di bit) è nel file TXT qui sotto.
+        </p>
+    </div>
+</body>
+</html>
